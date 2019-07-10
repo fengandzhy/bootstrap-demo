@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滚动条Modal</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<style>
+			.modal-dialog { 
+			    position: absolute; 
+			    top: 0; 
+			    bottom: 0; 
+			    left: 0; 
+			    right: 0; 
+			} 
+			
+			.modal-content { 
+			    /*overflow-y: scroll;*/  
+			    position: absolute; 
+			    top: 0; 
+			    bottom: 0; 
+			    width: 100%; 
+			} 
+			
+			.modal-body { 
+			    overflow-y: scroll;			    
+			    position: absolute; 
+			    top: 55px; 
+			    bottom: 65px; 
+			    width: 100%; 
+			} 
+			
+			.modal-header .close {margin-right: 15px;} 
+			
+			.modal-footer {
+			    position: absolute; 
+			    width: 100%; 
+			    bottom: 0; 
+			}
+
+		</style>
+	</head>
+	<body>
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#editModal">
+			Launch demo modal
+		</button>
+		<!-- EditUser -->
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" >
+				<div class="modal-content">			
+				    <div class="modal-header" style="background-color: #307095;font-weight: bold;">
+				        <button type="button" class="close" data-dismiss="modal">
+				            <span aria-hidden="true">&times;</span>
+				            <span class="sr-only">
+				            	<sp:message code="sys.close" />				            	
+				            </span>
+				        </button>
+				        <h4 class="modal-title" id="myModalLabel">
+				        	<!--<sp:message code="user.info"/>-<sp:message code="sys.edit"/>-->
+				        	管理系统
+				        </h4>
+				    </div>
+				
+				    <div class="modal-body" >
+				        <form class="form-horizontal"  id="editForm" action="" method="post">
+				            <div class="form-group">
+				                <label for="inputName" class="col-sm-3 control-label">
+				                	<!--<sp:message code="user.username"/>-->
+				                	用户名
+				                </label>
+				                <div class="col-sm-9">
+				                    <input type="text" class="form-control input-sm" name="username" readonly="readonly">
+				                </div>
+				            </div>
+				            <div class="form-group">
+				                <label for="inputName" class="col-sm-3 control-label">
+				                	<!--<sp:message code="user.username"/>-->
+				                	用户名
+				                </label>
+				                <div class="col-sm-9">
+				                    <input type="text" class="form-control input-sm" name="username" readonly="readonly">
+				                </div>
+				            </div>
+				            <div class="form-group">
+				                <label for="inputName" class="col-sm-3 control-label">
+				                	<!--<sp:message code="user.username"/>-->
+				                	用户名
+				                </label>
+				                <div class="col-sm-9">
+				                    <input type="text" class="form-control input-sm" name="username" readonly="readonly">
+				                </div>
+				            </div>
+				            <div class="form-group">
+				                <label for="inputName" class="col-sm-3 control-label">
+				                	<!--<sp:message code="user.username"/>-->
+				                	用户名
+				                </label>
+				                <div class="col-sm-9">
+				                    <input type="text" class="form-control input-sm" name="username" readonly="readonly">
+				                </div>
+				            </div><div class="form-group">
+				                <label for="inputName" class="col-sm-3 control-label">
+				                	<!--<sp:message code="user.username"/>-->
+				                	用户名
+				                </label>
+				                <div class="col-sm-9">
+				                    <input type="text" class="form-control input-sm" name="username" readonly="readonly">
+				                </div>
+				            </div>
+				            <div class="form-group">
+				                <label for="inputName" class="col-sm-3 control-label">
+				                	<!--<sp:message code="user.username"/>-->
+				                	用户名
+				                </label>
+				                <div class="col-sm-9">
+				                    <input type="text" class="form-control input-sm" name="username" readonly="readonly">
+				                </div>
+				            </div>
+				            
+				            <div class="form-group">
+				                <label for="inputName" class="col-sm-3 control-label">
+				                	<!--<sp:message code="user.username"/>-->
+				                	用户名
+				                </label>
+				                <div class="col-sm-9">
+				                    <input type="text" class="form-control input-sm" name="username" readonly="readonly">
+				                </div>
+				            </div>
+				            <div class="form-group">
+				                <label for="inputName" class="col-sm-3 control-label">
+				                	<!--<sp:message code="user.username"/>-->
+				                	用户名
+				                </label>
+				                <div class="col-sm-9">
+				                    <input type="text" class="form-control input-sm" name="username" readonly="readonly">
+				                </div>
+				            </div>
+				            <div class="form-group">
+				                <label for="inputName" class="col-sm-3 control-label">
+				                	<!--<sp:message code="user.username"/>-->
+				                	用户名
+				                </label>
+				                <div class="col-sm-9">
+				                    <input type="text" class="form-control input-sm" name="username" readonly="readonly">
+				                </div>
+				            </div>
+				            <div class="form-group">
+				                <label for="inputName" class="col-sm-3 control-label">
+				                	<!--<sp:message code="user.username"/>-->
+				                	用户名
+				                </label>
+				                <div class="col-sm-9">
+				                    <input type="text" class="form-control input-sm" name="username" readonly="readonly">
+				                </div>
+				            </div><div class="form-group">
+				                <label for="inputName" class="col-sm-3 control-label">
+				                	<!--<sp:message code="user.username"/>-->
+				                	用户名
+				                </label>
+				                <div class="col-sm-9">
+				                    <input type="text" class="form-control input-sm" name="username" readonly="readonly">
+				                </div>
+				            </div>
+				            <div class="form-group">
+				                <label for="inputName" class="col-sm-3 control-label">
+				                	<!--<sp:message code="user.username"/>-->
+				                	用户名
+				                </label>
+				                <div class="col-sm-9">
+				                    <input type="text" class="form-control input-sm" name="username" readonly="readonly">
+				                </div>
+				            </div>
+				        </form>
+				    </div>
+				    			
+				    <div class="modal-footer">
+				        <button id="btn-submit" type="submit" class="btn btn-primary">
+				        	<!--<sp:message code="sys.submit"/>-->
+				        	提交
+				        </button>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery.min.js" ></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".modal-dialog").draggable();
+		});
+	</script>
+</html>
