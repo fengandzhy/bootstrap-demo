@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no,maxmium-scale=1.0">
+		<title>分裂式按钮下拉菜单</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/bootstrap-theme.css"/>
+		
+		<style type="text/css">
+			.menu{
+				width:200px;
+				border:1px solid #23527C;
+				position:absolute;
+				left:0px;
+				top:34px;	
+			}
+			.hide{
+				display:none;
+			}
+			.show{
+				display:block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="btn-group">
+		  <button type="button" class="btn btn-info">Action</button>
+		  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    <span class="caret"></span>
+		    <span class="sr-only">Toggle Dropdown</span>
+		  </button>
+		  <ul class="dropdown-menu">
+		    <li><a href="#">Action</a></li>
+		    <li><a href="#">Another action</a></li>
+		    <li><a href="#">Something else here</a></li>
+		    <li role="separator" class="divider"></li>
+		    <li><a href="#">Separated link</a></li>
+		  </ul>
+		</div>
+		
+		<div class="row">
+		<div class="col-lg-6">
+		<div class="input-group">		  
+	  		<input type="text" class="form-control" style="width:200px;" id="username" placeholder="Username"/>  		
+	    	<span class="input-group-btn" style="float:left;">
+	    		<button type="button" class="btn btn-info dropdown-toggle" 
+	    			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btn">
+	    			<span class="caret" id="caret"></span>
+		    		<span class="sr-only">Toggle Dropdown</span>
+		    	</button>		    	
+	    	</span>
+	    	<ul class="menu hide" id="menu">
+		    	<li><a href="#">Action</a></li>
+		    	<li><a href="#">Another action</a></li>
+		    	<li><a href="#">Something else here</a></li>
+		    	<li role="separator" class="divider"></li>
+		    	<li><a href="#">Separated link</a></li>
+		  	</ul>
+		</div>
+		</div>
+		</div>
+		
+		
+		
+	</body>
+	<script src="../js/jquery-2.1.1.min.js"></script>    
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+    	/*$("#btn").click(function(e){
+    		console.log(e);
+			$("#menu").removeClass('hide').addClass('show');
+		});*/
+		
+		var btn = document.getElementById("btn");//取到的是一个dom对象 $("#menu")取到的是一个jquery对象
+		var caret = document.getElementById("caret");		
+		document.body.onclick = function(e){			
+			e = e || window.event;
+  			var target = e.target || e.srcElement;  					
+  			if(target == btn || target == caret){
+  				$("#menu").removeClass('hide').addClass('show');
+  			}else{
+  				$("#menu").removeClass('show').addClass('hide');
+  			}
+		}
+		
+		$(".menu li").click(function(e){
+			debugger;
+			console.log($(e.target).html());
+			console.log($("#username").val());
+    		$("#username").prop("value",$(e.target).html()); 
+    		//username.value = $(e.target).html()
+			$("#menu").removeClass('show').addClass('hide');
+			console.log($("#username").val());
+		});
+    </script>
+</html>
